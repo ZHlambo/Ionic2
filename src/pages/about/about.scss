@@ -1,0 +1,183 @@
+page-about {
+  background: #fcfcfc;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+li {
+  list-style: none;
+}
+
+.header_list {
+  height: 42px;
+  line-height: 40px;
+  font-size: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-bottom: 1px solid #ddd;
+  color: #686868;
+  margin-right: 15%;
+  white-space: nowrap;
+}
+
+.header_list > li {
+  display: inline-block;
+  min-width: 50px;
+  padding: 0 10px;
+  text-align: center;
+  list-style: none;
+  border-bottom: 2px solid transparent;
+}
+
+.header_list > li.active {
+  font-weight: bold;
+  color: #f24c38;
+  border-bottom: 2px solid #f24c38;
+}
+
+.header_list > li:active {
+  background: #ddd;
+}
+
+.header_list > li.active:active {
+  background: transparent;
+}
+
+.two_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100% - 42px);
+  font-size: 14px;
+}
+
+.two_list > ul {
+  height: 100%;
+  text-align: center;
+}
+
+.cat_list {
+  width: 30%;
+  background-color: #e7e7e7;
+}
+
+.cat_list > li {
+  line-height: 40px;
+  font-size: 14px;
+  background: white;
+  position: relative;
+  margin-bottom: 1px;
+}
+
+.cat_list i {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  transition: all 0.3s ease;
+}
+
+.cat_list li {
+  color: #686868;
+}
+
+.cat_list .active > div {
+  font-weight: bold;
+  color: #f24c38;
+}
+
+.cat_list > .open {
+  background: transparent;
+}
+
+.cat_list > .open li {
+  border-top: 1px solid #ddd;
+}
+
+.cat_list ul {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.cat_list > .open ul {
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.cat_list > .open i {
+  transform: rotate(-180deg);
+}
+
+.cat_children_list .active {
+  color: #f24c38;
+}
+// .cat_list li::after {
+//   display: block;
+//   content: "▼";
+//   float: right;
+//   background-color: #989898;
+//   height: 10px;
+//   width: 10px;
+//   transform: rotate(45deg);
+//   background: -webkit-repeating-linear-gradient(45deg white 0%, white 50%, black 50%,black 100%);
+//   background: -o-repeating-linear-gradient(45deg white 0%, white 50%, black 50%,black 100%);
+//   background: -moz-repeating-linear-gradient(45deg white 0%, white 50%, black 50%,black 100%);
+//   background: repeating-linear-gradient(45deg white 0%, white 50%, black 50%,black 100%);
+// }
+
+.two_list > ul:last-child {
+  width: 70%;
+  background-color: #f2f2f2;
+}
+
+.item_list > li {
+  text-align: left;
+  margin: 5px 5px 0;
+  padding: 5px;
+  background: white;
+}
+
+.item_list > li > img {
+  width: 85px;
+  height: 85px;
+  min-width: 85px;
+  float: left;
+}
+
+.item_list > li > div {
+  padding-left: 100px;
+  width: 100%;
+  height: 95px;
+}
+
+.item_list > li > div > div:nth-child(1) {
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item_list > li > div > div:nth-child(2) {
+  font-size: 13px;
+  margin: 7px 0;
+  height: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  // -webkit-line-clamp: 2;
+  // -webkit-box-orient: vertical!important;//该样式在ionic无效自动被删除了
+}
+
+.item_list > li > div > div:nth-child(3) {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(242, 76, 56);
+}
+
+.dialog{
+  background: transparent;
+}

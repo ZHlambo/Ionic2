@@ -1,0 +1,14 @@
+.ion-page {
+  padding-bottom: 50px;
+}
+
+.ion-page > div {
+  height: 100%;
+}
+
+.content-ios:not([no-bounce]) > .scroll-content::before, .content-ios:not([no-bounce]) > .scroll-content::after{
+  height: 0!important;
+}
+ion-content > div{
+  background: rgb(244,244,244);
+}

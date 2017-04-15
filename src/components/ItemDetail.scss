@@ -1,0 +1,149 @@
+ion-app > ion-modal {
+  background: rgba(0,0,0,0);
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+ion-app > .show-page {
+  background: rgba(0,0,0,.4);
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+.item_detail {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.itemHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+}
+
+.itemHeader > img {
+  width: 90px;
+  height: 90px;
+  margin-top: -30px;
+  margin-right: 10px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+
+.name > div:nth-child(1) {
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #686868;
+}
+
+.name > div:nth-child(2) {
+  font-size: 13px;
+  padding-top: 5px;
+  height: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  color: #989898;
+}
+
+.name > div:nth-child(3) {
+  font-size: 16px;
+  color: #f24c38;
+}
+
+.itemHeader .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.skus {
+  padding: 0 10px;
+}
+
+.skus > div:first-child {
+  font-size: 16px;
+  color: green;
+  padding-bottom: 10px;
+}
+
+.skus ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.skus li {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin: 10px 10px 0 0;
+  padding: 5px 15px;
+  color: #686868;
+}
+
+.skus li.active {
+  background-color: #f24c38;
+  color: white;
+}
+
+.buy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px 10px 0;
+  font-size: 16px;
+  border-top: 1px solid #ddd;
+}
+
+.buy input {
+  width: 80px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  text-align: center;
+  padding: 5px;
+  margin: -5px 0;
+}
+
+.buy i {
+  color: #f24c38;
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+.detail_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail_bottom > div {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.detail_bottom > div:first-child {
+  background: #ececec;
+  color: #686868;
+}
+
+.detail_bottom > div:last-child {
+  background: #f24c38;
+  color: white;
+}

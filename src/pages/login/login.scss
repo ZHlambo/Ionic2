@@ -1,0 +1,75 @@
+page-login {
+  background: rgb(244,244,244);
+}
+
+.loginHeader {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.loginHeader > img {
+  width: 80px;
+  height: 80px;
+}
+
+.loginBody {
+  background-color: white;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 16px;
+  padding-left: 15px;
+}
+
+.loginBody > div {
+  line-height: 40px;
+}
+
+.loginBody input {
+  border: 0;
+}
+
+.loginBody > div:last-child::before {
+  content: " ";
+  display: block;
+  height: 1px;
+  background: #d9d9d9;
+}
+
+.submit {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  margin: 20px 10% 10px;
+  line-height: 2.33333333;
+  border-radius: 5px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  background-color: #04be02;
+}
+
+.loginBottom {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.loginBottom > div {
+  width: 100%;
+  color: #686868;
+}
+
+.loginBottom > div:last-child {
+  color: #04be02;
+}

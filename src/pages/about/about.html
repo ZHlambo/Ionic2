@@ -1,0 +1,32 @@
+<div>
+  <ul class="header_list">
+    <li *ngFor="let cat of rootCats" [ngClass]="{'active' : firstCatId == cat.catid}" (click)="clickFirstCat(cat)">
+      {{cat.name}}
+    </li>
+  </ul>
+  <div class="two_list">
+    <ul class="cat_list">
+      <li *ngFor="let cat of childrenCats" [ngClass]="{'open' : secondCatId == cat.catid,'active': secondCatId == cat.catid && !thirdCatId}">
+        <div (click)="clickSecondCat(cat)">{{cat.name}}
+          <i *ngIf="cat.children && cat.children.length > 0" class="fa fa-caret-down"></i>
+        </div>
+        <ul class="cat_children_list">
+          <li *ngFor="let catChild of cat.children" (click)="clickThirdCat(catChild)" [ngClass]="{'active' : thirdCatId == catChild.catid}">
+          <div>{{catChild.name}}</div>
+        </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="item_list">
+      <li *ngFor="let item of items" (click)="clickItem(item)">
+        <img [src]="item.images && 'http://ok273wav2.qnssl.com' + item.images[0]" alt="" />
+        <div>
+          <div>{{item.name}}</div>
+          <div>{{item.description}}</div>
+          <div>￥ {{item.price_limit.min}}~{{item.price_limit.max}}</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<ion-nav *ngIf="showDetail" class="dialog" [root]="ItemDetailDialog"></ion-nav>

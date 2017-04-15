@@ -1,0 +1,37 @@
+<div (click)="dismiss(this,'')">
+  <div class="item_detail" (click)="$event.stopPropagation()">
+    <div class="itemHeader">
+      <img [src]="item.images && 'http://ok273wav2.qnssl.com' + item.images[0]" alt="">
+      <div class="name">
+        <div>{{item.name}}</div>
+        <div>{{item.description}}</div>
+        <div>￥ {{nowSku.price}}</div>
+      </div>
+      <span (click)="dismiss(this,'')" class="close">关闭</span>
+    </div>
+    <div class="skus">
+      <div>请选择规格</div>
+      <ul *ngIf="!loading">
+        <li *ngFor="let sku of item.skus" [ngClass]="{'active':nowSku.skuid == sku.skuid}" (click)="selectSku(sku)">{{sku.name}}</li>
+      </ul>
+      <div *ngIf="loading">
+        <i class="fa fa-spinner fa-pulse fa-fw"></i> 正在加载中...
+      </div>
+    </div>
+    <div class="buy">
+      <div class="">
+        购买数量：
+      </div>
+      <div>
+        <i class="fa fa-minus-circle" (click)="quantityChange(-1)"></i>
+        <input type="number" id="quantity" [value]="quantity">
+        <i class="fa fa-plus-circle" (click)="quantityChange(1)"></i>
+        {{nowSku.unit}}
+      </div>
+    </div>
+    <div class="detail_bottom">
+      <div> 收藏商品 </div>
+      <div (click)="dismiss(this,'href')"> 加入购物车 </div>
+    </div>
+  </div>
+</div>
